@@ -236,6 +236,8 @@ export default class ExampleComponent extends Component {
   }
   static defaultProps = {
     textColor: "#fff",
+    listNavigation: [],
+    listSocialNetwork: []
   }
   constructor(props) {
     super(props);
