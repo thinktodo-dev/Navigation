@@ -141,15 +141,10 @@ const listSocialNetwork = [
   },
 ]
 
-class AccordionView extends Component {
-  state = {
-    activeSections: [],
-  };
-
-
+class Example extends Component {
   render() {
     return (
-        <ExampleComponent 
+        <MasspaNavigation 
           logo={logo}
           listNavigation={listNavigation}
           listSocialNetwork={listSocialNetwork}
