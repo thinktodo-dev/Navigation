@@ -55,6 +55,7 @@ import {
   FaAngleDoubleDown,
   FaAngleDoubleUp,
 } from "react-icons/fa";
+import logo from './img/home1.png';
 
 const listNavigation = [
   {
@@ -93,6 +94,52 @@ const listNavigation = [
               parentCode: "6ad7b240-990c-400f-ab74-35c77be9ce2b",
               createdAt: 1564381904891,
               updatedAt: 1564381904891,
+              subMenu: {
+                isFulfilled: true,
+                isRejected: false,
+                fulfillmentValue: [
+                  {
+                    id: "5a78a9fc-e286-488b-9d0f-75c71f70315f",
+                    serviceCode: "0548caa0-a47b-11e9-b6ea-cd470457ddbc",
+                    name: "Chăm Sóc Toàn thân",
+                    parentCode: "6ad7b240-990c-400f-ab74-35c77be9ce2b",
+                    createdAt: 1564381904891,
+                    updatedAt: 1564381904891,
+                    subMenu: {
+                      isFulfilled: true,
+                      isRejected: false,
+                      fulfillmentValue: [
+                        {
+                          id: "5a78a9fc-e286-488b-9d0f-75c71f70315f",
+                          serviceCode: "0548caa0-a47b-11e9-b6ea-cd470457ddbc",
+                          name: "Chăm Sóc Toàn thân",
+                          parentCode: "6ad7b240-990c-400f-ab74-35c77be9ce2b",
+                          createdAt: 1564381904891,
+                          updatedAt: 1564381904891,
+                          subMenu: []
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    id: "77340f06-f61a-4bfb-82a8-c44731ad0245",
+                    serviceCode: "0548caa0-a47b-11e9-b6ea-cd470457ddbc",
+                    name: "Massage toàn thân",
+                    parentCode: "6ad7b240-990c-400f-ab74-35c77be9ce2b",
+                    createdAt: 1564381869522,
+                    updatedAt: 1564381869522,
+                    subMenu: []
+                  }
+                ]
+              }
+            },
+            {
+              id: "77340f06-f61a-4bfb-82a8-c44731ad0245",
+              serviceCode: "0548caa0-a47b-11e9-b6ea-cd470457ddbc",
+              name: "Chăm Sóc Da Mặt ",
+              parentCode: "6ad7b240-990c-400f-ab74-35c77be9ce2b",
+              createdAt: 1564381869522,
+              updatedAt: 1564381869522,
               subMenu: []
             }
           ]
@@ -106,7 +153,7 @@ const listNavigation = [
         createdAt: 1564374784686,
         updatedAt: 1564374784686,
         subMenu: []
-      }
+      },
     ],
     onClick: () => console.log('click')
   },
@@ -153,6 +200,11 @@ class AccordionView extends Component {
   }
 }
 ```
+
+## Demo
+
+![demo](https://raw.githubusercontent.com/thinktodo-dev/Navigation/master/example/ezgif-3-8bef78596dda.gif)
+
 ## License
 
 MIT © [maitrucquynhq111](https://github.com/maitrucquynhq111)
