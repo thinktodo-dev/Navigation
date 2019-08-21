@@ -170,4 +170,4 @@ class AccordionView extends Component {
 
 ## License
 
-MIT © [maitrucquynhq111](https://github.com/maitrucquynhq111)
+MIT © [Masspa](https://github.com/thinktodo-dev)
