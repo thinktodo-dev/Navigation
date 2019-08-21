@@ -94,44 +94,7 @@ const listNavigation = [
               parentCode: "6ad7b240-990c-400f-ab74-35c77be9ce2b",
               createdAt: 1564381904891,
               updatedAt: 1564381904891,
-              subMenu: {
-                isFulfilled: true,
-                isRejected: false,
-                fulfillmentValue: [
-                  {
-                    id: "5a78a9fc-e286-488b-9d0f-75c71f70315f",
-                    serviceCode: "0548caa0-a47b-11e9-b6ea-cd470457ddbc",
-                    name: "Chăm Sóc Toàn thân",
-                    parentCode: "6ad7b240-990c-400f-ab74-35c77be9ce2b",
-                    createdAt: 1564381904891,
-                    updatedAt: 1564381904891,
-                    subMenu: {
-                      isFulfilled: true,
-                      isRejected: false,
-                      fulfillmentValue: [
-                        {
-                          id: "5a78a9fc-e286-488b-9d0f-75c71f70315f",
-                          serviceCode: "0548caa0-a47b-11e9-b6ea-cd470457ddbc",
-                          name: "Chăm Sóc Toàn thân",
-                          parentCode: "6ad7b240-990c-400f-ab74-35c77be9ce2b",
-                          createdAt: 1564381904891,
-                          updatedAt: 1564381904891,
-                          subMenu: []
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    id: "77340f06-f61a-4bfb-82a8-c44731ad0245",
-                    serviceCode: "0548caa0-a47b-11e9-b6ea-cd470457ddbc",
-                    name: "Massage toàn thân",
-                    parentCode: "6ad7b240-990c-400f-ab74-35c77be9ce2b",
-                    createdAt: 1564381869522,
-                    updatedAt: 1564381869522,
-                    subMenu: []
-                  }
-                ]
-              }
+              subMenu: []
             },
             {
               id: "77340f06-f61a-4bfb-82a8-c44731ad0245",
