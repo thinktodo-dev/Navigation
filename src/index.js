@@ -413,6 +413,7 @@ export default class ExampleComponent extends Component {
                 <div className="icons_brands_container">
                   {listSocialNetwork.map((item, index) => 
                     <NavLink
+                    key={`nav-${index}`}
                       href={item.link}
                       className="icon_link"
                     >
