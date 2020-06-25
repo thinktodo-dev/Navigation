@@ -1,6 +1,6 @@
 # masspa-navigation
 
-> 
+>
 
 [![NPM](https://img.shields.io/npm/v/masspa-navigation.svg)](https://www.npmjs.com/package/masspa-navigation) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 Masspa package to make menu navigation
@@ -14,58 +14,57 @@ npm install --save masspa-navigation
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import MasspaNavigation from 'masspa-navigation'
+import MasspaNavigation from "masspa-navigation";
 
 class Example extends Component {
-  render () {
-    return (
-      <MasspaNavigation />
-    )
+  render() {
+    return <MasspaNavigation />;
   }
 }
 ```
 
 ## Properties
 
-| Prop                      | Description                                                                                                                                                                                                                                                                                                             | Default        |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| **`listNavigation`**               | List item to show in navigation                                                                                                                                                                                                                                         | `[]`          |
-| **`listSocialNetwork`**               | List social icon to show in navigation                                                                                                                                                                                                                                         | `[]`          |
-| **`logo`**               | Logo to show in top header                                                                                                                                                                                                                                         | `Masspa Logo`          |
-| **`iconBackNode`**               | Node back icon in navigation                                                                                                                                                                                                                                        | `<FaArrowAltCircleRight/>`          |
-| **`iconArrowDown`**               | Node icon collapse down in navigation                                                                                                                                                                                                                                        | `<FaAngleDown/>`          |
-| **`iconArrowUp`**               | Node icon collapse up in navigation                                                                                                                                                                                                                                        | `<FaAngleUp/>`          |
-| **`textColor`**               | Color text                                                                                                                                                                                                                                         | `#FFFFFF`          |
-| **`backgroundColor`**               | Color background                                                                                                                                                                                                                                        | `rgba(40, 24, 15, 0.8)`          |
-
+| Prop                    | Description                                       | Default                      |
+| ----------------------- | ------------------------------------------------- | ---------------------------- |
+| **`listNavigation`**    | List item to show in navigation                   | `[]`                         |
+| **`listSocialNetwork`** | List social icon to show in navigation            | `[]`                         |
+| **`logo`**              | Logo to show in top header                        | `Masspa Logo`                |
+| **`iconBackNode`**      | Node back icon in navigation                      | `<FaArrowAltCircleRight/>`   |
+| **`iconArrowDown`**     | Node icon collapse down in navigation             | `<FaAngleDown/>`             |
+| **`iconArrowUp`**       | Node icon collapse up in navigation               | `<FaAngleUp/>`               |
+| **`textColor`**         | Color text                                        | `#FFFFFF`                    |
+| **`backgroundColor`**   | Color background                                  | `rgba(40, 24, 15, 0.8)`      |
+| **`funcNav`**           | function trigger when click on Nav background     | console.log("click")         |
+| **`funcSubnav`**        | function trigger when click on Sub Nav background | console.log("click Sub Nav") |
 
 ## Example
 
 Check full example in the `Example` folder.
 
 ```js
-import React, { Component } from 'react';
-import MasspaNavigation from 'masspa-navigation';
+import React, { Component } from "react";
+import MasspaNavigation from "masspa-navigation";
 import {
   FaInstagram,
   FaFacebookSquare,
   FaTwitter,
   FaAngleDoubleDown,
-  FaAngleDoubleUp,
+  FaAngleDoubleUp
 } from "react-icons/fa";
-import logo from './img/home1.png';
+import logo from "./img/home1.png";
 
 const listNavigation = [
   {
-    name: 'Trang Chủ',
+    name: "Trang Chủ",
     subMenu: [],
-    onClick: () => console.log('click')
+    onClick: () => console.log("click")
   },
   {
-    id: '5',
-    name: 'Dịch Vụ',
+    id: "5",
+    name: "Dịch Vụ",
     subMenu: [
       {
         id: "2eef8dbe-3725-4448-a83f-fac2ecc1cc94",
@@ -116,16 +115,16 @@ const listNavigation = [
         createdAt: 1564374784686,
         updatedAt: 1564374784686,
         subMenu: []
-      },
+      }
     ],
-    onClick: () => console.log('click')
+    onClick: () => console.log("click")
   },
   {
-    name: 'Sản Phẩm',
+    name: "Sản Phẩm",
     subMenu: [],
-    onClick: () => console.log('click')
-  },
-]
+    onClick: () => console.log("click")
+  }
+];
 const listSocialNetwork = [
   {
     node: <FaFacebookSquare className="menu_icon" />,
@@ -138,22 +137,30 @@ const listSocialNetwork = [
   {
     node: <FaInstagram className="menu_icon" />,
     link: "https://www.instagram.com/"
-  },
-]
+  }
+];
 
 class Example extends Component {
+  onClickSubNav = item => {
+    console.log(item.name);
+  };
+  onClickNav = item => {
+    console.log(item.name);
+  };
   render() {
     return (
-        <MasspaNavigation 
-          logo={logo}
-          listNavigation={listNavigation}
-          listSocialNetwork={listSocialNetwork}
-          iconBackNode={<img src={iconBack} className="menu_icon_back"/>}
-          textColor="#9CDCFE"
-          backgroundColor='rgb(40, 24, 15)'
-          iconArrowDown={<FaAngleDoubleDown className="w-50"/>}
-          iconArrowUp={<FaAngleDoubleUp className="w-50"/>}
-        />
+      <MasspaNavigation
+        logo={logo}
+        listNavigation={listNavigation}
+        listSocialNetwork={listSocialNetwork}
+        iconBackNode={<img src={iconBack} className="menu_icon_back" />}
+        textColor="#9CDCFE"
+        backgroundColor="rgb(40, 24, 15)"
+        iconArrowDown={<FaAngleDoubleDown className="w-50" />}
+        iconArrowUp={<FaAngleDoubleUp className="w-50" />}
+        funcNav={this.onClickNav}
+        funcSubnav={this.onClickSubNav}
+      />
     );
   }
 }
